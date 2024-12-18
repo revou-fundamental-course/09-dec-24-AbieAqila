@@ -53,22 +53,22 @@ const validateInput = () => {
 var firstIndex = 0;
 
 function automaticSlide() {
-    setTimeout(automaticSlide, 2000); // Membuat fungsi berjalan setiap 2 detik
-    const img = document.querySelectorAll('.images img'); // Mengambil semua gambar dalam container
+    setTimeout(automaticSlide, 2000); 
+    const img = document.querySelectorAll('.images img'); 
 
-    // Menyembunyikan semua gambar
+    
     for (let pics = 0; pics < img.length; pics++) {
         img[pics].style.display = "none";
     }
 
-    // Menampilkan gambar berikutnya
+    
     firstIndex++;
     if (firstIndex > img.length) {
-        firstIndex = 1; // Mengulang ke gambar pertama
+        firstIndex = 1; 
     }
 
     img[firstIndex - 1].style.display = "block";
 }
 
-automaticSlide(); // Memanggil fungsi pertama kali
+automaticSlide(); 
 
